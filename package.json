@@ -52,5 +52,9 @@
   },
   "engines": {
     "node": "*"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "bullet-train": "lib/bullet-train.js"
   }
 }
