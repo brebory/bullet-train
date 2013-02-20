@@ -13,7 +13,7 @@ var program = require('commander')
 
   // CLI
 
- program
+program
 	.version('0.0.1');
 
 program
@@ -24,13 +24,13 @@ program
     });
 
 program
-    .command('add')
+	.command('add <class>')
 	.description('-- generate boilerplate for MVC components --')
 	.action( function() {
 		// implement	
 	})
-	.option('-m, --model <string>', 'name of the class for which to generate model boilerplate')
-	.option('-v, --view <string>', 'name of the class for which to generate view boilerplate')
-	.option('-c, --controller <string>', 'name of the class for which to generate controller boilerplate');
+	.option('-m, --model', 'only generate boilerplate for model')
+	.option('-v, --view', 'only generate boilerplate for view')
+	.option('-c, --controller', 'only generate boilerplate for controller');
 
 program.parse(process.argv)
